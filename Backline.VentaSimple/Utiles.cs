@@ -223,10 +223,10 @@ namespace Backline.VentaSimple
 
             //System.Windows.Forms.MessageBox.Show("Ambiente:" + ambiente);
 
-            if (VariablesGlobales.UsuarioLogeado.Emp_Id == 2)
-            {
-                ambiente = "cer";
-            }
+            //if (VariablesGlobales.UsuarioLogeado.Emp_Id == 2)
+            //{
+            //    ambiente = "cer";
+            //}
             
             var dte = trx.GenerarDTE(modelo, VariablesGlobales.UsuarioLogeado.Usuario_FE, VariablesGlobales.UsuarioLogeado.Clave_FE, System.IO.Directory.GetCurrentDirectory(), ambiente.ToLower());
             apiResult = dte;

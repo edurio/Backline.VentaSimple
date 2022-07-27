@@ -159,9 +159,9 @@ namespace Backline.VentaSimple
             Backline.Entidades.Factura factura = new Backline.Entidades.Factura();
             factura.Rut = txtRut.Text.ToUpper();
             factura.RazonSocial = txtNombre.Text;
-            factura.Total = int.Parse(txtCantidad.Value.ToString()) * int.Parse(txtValor.Value.ToString());
-            factura.Neto = Math.Round(factura.Total / 1.19, 0);
-            factura.Iva = Math.Round(factura.Total - factura.Neto);
+            factura.Total = int.Parse(txtTotal.Value.ToString());
+            factura.Neto = 0;
+            factura.Iva = 0;
 
             factura.Fecha = DateTime.Now;
             factura.ContId = _contribuyenteEncontrado.Id;
